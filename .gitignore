@@ -1,0 +1,28 @@
+# Cria um .gitignore preparado para Go, Java, Docker e Certificados
+cat << 'EOF' > .gitignore
+# Binários e builds Go
+bin/
+*.exe
+*.out
+
+# Builds Java / Maven / Gradle
+target/
+build/
+.gradle/
+
+# Certificados e Chaves Privadas 
+infra/certs/*.key
+infra/certs/*.pem
+infra/certs/*.crt
+infra/certs/*.csr
+infra/certs/*.srl
+
+# Ambientes, IDEs e Sistema
+.env
+.idea/
+.vscode/
+.DS_Store
+*.tfstate*
+.terraform/
+EOF
+
